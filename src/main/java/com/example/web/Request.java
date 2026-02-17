@@ -44,7 +44,7 @@ public class Request {
     public List<String> getQueryParam(String name) {
         List<String> values = new ArrayList<>();
         for (NameValuePair pair : queryParams) {
-            if (pair.getName().equalsIgnoreCase(name)) { // Используем equalsIgnoreCase для надежности
+            if (pair.getName().equalsIgnoreCase(name)) { 
                 values.add(pair.getValue());
             }
         }
@@ -58,7 +58,7 @@ public class Request {
     public List<String> getPostParam(String name) {
         List<String> values = new ArrayList<>();
         for (NameValuePair pair : postParams) {
-            if (pair.getName().equalsIgnoreCase(name)) { // Используем equalsIgnoreCase для надежности
+            if (pair.getName().equalsIgnoreCase(name)) { 
                 values.add(pair.getValue());
             }
         }
