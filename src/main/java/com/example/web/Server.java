@@ -181,8 +181,8 @@ public class Server {
 
     private static Optional<String> extractHeader(List<String> headers, String header) {
         return headers.stream()
-                .filter(o -> o.toLowerCase().startsWith(header.toLowerCase() + ":")) // Точное совпадение имени заголовка
-                .map(o -> o.substring(o.indexOf(":") + 1)) // Берем всё после двоеточия
+                .filter(o -> o.toLowerCase().startsWith(header.toLowerCase() + ":")) 
+                .map(o -> o.substring(o.indexOf(":") + 1)) 
                 .map(String::trim)
                 .findFirst();
     }
